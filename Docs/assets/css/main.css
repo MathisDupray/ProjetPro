@@ -1,4 +1,4 @@
-body * {
+* {
     padding:0;
     margin:0;
 }
@@ -6,11 +6,14 @@ body * {
 body {
     background-color: black;
     font-family: Tahoma, sans-serif;
-    background-size: auto;
+    background-size: 100%;
     background-attachment: fixed;
     background-image: url("./../images/5172658.jpg");
     background-repeat: no-repeat;
 }
+
+/* --------------------------------header-------------------------------- */
+
 
 header ul {
     list-style-type: none;
@@ -38,12 +41,13 @@ header li a{
 }
 
 header {
-    width:100%;
+    width:95%;
     display:flex;
     flex-direction: column;
     align-items: center;
     z-index:100;
     position:fixed;
+    top:0;
 }
 
 header .headerlogo {
@@ -55,4 +59,54 @@ header li a:hover {
     opacity: 0.8;
     transition:0.2s;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* --------------------------------main-------------------------------- */
+.main {
+    margin-top: 10em;
+    color:white;
+    display:flex;
+    flex-direction: column;
+}
+
+/*  ------------------------------welcome--------------------------------*/
+
+.welcome {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+    min-height: 62vw;
+}
+
+#imgwelcome {
+    border-radius: 50%;
+    border:lightblue 5px solid;
+    box-shadow: 0.2em 0.2em 0.2em lightblue;
+    max-width: 20%;
+}
+
+.welcome h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: black;
+    padding:1em;
+}
+
+.welcome p {
+    margin-bottom:1em;
+    padding:1em;
+}
+
+.down {
+    margin-top: 1em;
+}
+
+
+
+/* --------------------------------About-------------------------------- */
+
+.about {
+    background-color: white;
+    min-height: 62em;
 }
