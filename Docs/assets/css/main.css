@@ -35,7 +35,7 @@ header li a{
 .splitbar {
     width:85%;
     opacity:0.8;
-    margin-top:1.5em;
+    margin-top:2vh;
 }
 
 #navbar {
@@ -50,7 +50,7 @@ header {
     display:flex;
     flex-direction: column;
     align-items: center;
-    z-index:100;
+    z-index:100; /* etre sur que c'est sur layer dessus */
     position:fixed;
     top:0;
 }
@@ -69,7 +69,7 @@ header li a:hover {
 
 /* --------------------------------main-------------------------------- */
 .main {
-    margin-top: 10em;
+    margin-top: 15vh;
     color:white;
     display:flex;
     flex-direction: column;
@@ -84,7 +84,7 @@ header li a:hover {
     flex-direction: column;
     align-items: center;
     width:100%;
-    min-height: 62vw;
+    height: 100vh;
 }
 
 #imgwelcome {
@@ -117,13 +117,12 @@ header li a:hover {
 
 .about {
     background-color: lightgray;
-    min-height: 115vh;
+    height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 2px solid black;
-    padding-top: 15vh;
 }
 
 .bg {
@@ -151,6 +150,7 @@ header li a:hover {
 
 .about h1 {
     margin-bottom:2em;
+    margin-top:10vh;
 }
 
 #text {
@@ -182,13 +182,13 @@ header li a:hover {
     display:flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: lightblue;
 }
 
 
 .skills h1 {
-    margin-top: 2em;
+    margin-top: 15vh;
     margin-bottom: 2em;
 }
 
@@ -205,7 +205,7 @@ header li a:hover {
 
 .experiences {
     background-color: lightgreen;
-    min-height: 100vh;
+    height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
