@@ -212,7 +212,7 @@ header li a:hover {
 /* FLIP CARD > Aidé de W3C flipcard*/
 .flip-card {
     background-color: transparent;
-    width: 300px;
+    width: 300px; /* a changer */
     height: 200px;
     perspective: 1000px; /* effet 3d */
 }
@@ -232,11 +232,11 @@ header li a:hover {
     transform: rotateY(180deg);
 }
   
-.flip-card-front, .flip-card-back {
+.flip-card-front, .flip-card-back { /*position pour front */
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden;
+    backface-visibility: hidden; /* pour que le texte soit caché tant que pas de :hover */
 }
   
 .flip-card-front { /* styles ici = if missing image */
@@ -260,25 +260,45 @@ header li a:hover {
 /*-----------------------------------------------------------------------*/
 /* --------------------------------FORMATION---------------------------- */
 /*-----------------------------------------------------------------------*/
+/*https://www.w3schools.com/howto/howto_css_timeline.asp*/
+
 
 #Formation {
     height:100vh;
     text-align: center;
+    background-color: lightcoral;
 }
 
 #Formation h1 {
-    color:white;
     padding-top: 15vh;
+    margin-bottom: 5vh;
+}
+
+#timeline {
+    height:70vh;
+    width:100%;
+}
+
+#formation_droite {
+    border-left: 10px solid black;
+    padding-left: 5vw;
+}
+
+#formation_gauche {
+    padding-right: 5vw;
 }
 
 #formationlist {
     display:flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top:20vh;
+    justify-content: center;
 }
 
-.formationbox {
-    background-color: white;
-    border:20px solid black;
+#formationitem1 {
+    height:15vh;
+    margin-bottom: 20vh;
+}
+
+#formationitem3 {
+    margin-top: 15vh;
+    margin-bottom:20vh;
 }
