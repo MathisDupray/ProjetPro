@@ -1,0 +1,23 @@
+- formation: "Baccalauréat scientifique"
+  date: 2017
+  etab: "Lycée Charles Francois Lebrun"
+  where: Coutances, Manche
+  mention: Mention AB
+
+- formation: "IUT STID"
+  date: 2018-2020
+  etab: "Statistiques et Informatique décisionelle"
+  where: lisieux, Orne
+  mention: "Année non obtenue"
+  
+- formation: "Licence LLCER"
+  date: 2021-2022
+  etab: "Fac de langues, campus 1"
+  where: Caen, Calvados
+  mention: "Année non terminée"
+
+- formation: "BTS SIO"
+  date: 2023-
+  etab: "Caensup St Ursule"
+  where: Caen, Calvados
+  mention: --

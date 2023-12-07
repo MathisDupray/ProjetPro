@@ -1,5 +1,12 @@
 - poste: "opérateur sur machine"
+  jobID: 1
   entreprise: dfdfdsf
   dateStart: dsfdsfdsfds
   dateEnd: dsfdsfdsfds
   do_what: gfhgfhgfhgfh
+- poste : "testeteststes"
+  jobID: 2
+  entreprise: dfdsfdsfdsfds
+  dateStart: fdsfdsfdsfs
+  dateEnd: dfdsfdsfdsfds
+  do_what: dgfdgfdgfd

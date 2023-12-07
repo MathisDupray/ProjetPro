@@ -1,0 +1,28 @@
+- domaine: developpement
+  competences:
+    css: 3
+    html: 3
+    python: 3
+    php: 3
+    sql: 3
+- domaine: langues
+  competences:
+    anglais: 5
+    espagnol: 2
+    russe: 1
+- domaine: réseau
+  competences:
+    adressage: 4
+    protocoles: 3.5
+    infrastructure: 3
+    services web: 3
+- domaine: bureautique
+  competences:
+    suiteexcel: 3
+    Windows: 4
+    Linux: 3
+- domaine: dsfdsfdsfdsfds
+  competences:
+    dfdsfds: 2
+    fdsfdsfdsfs: 2
+    dfdsfdsfdsfds: 2
