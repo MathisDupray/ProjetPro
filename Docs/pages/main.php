@@ -20,7 +20,7 @@
 					<li><a href="#About">A propos</a></li>
 					<li><a href="#anchorskills">Compétences</a></li>
 					<li><a href="#anchorexperience">Experience</a></li>
-					<li><a href="#Formation">Formation</a></li>
+					<li><a href="#anchorform">Formation</a></li>
 					<li><a href="#Contact">Contact</a></li>
 				</ul>
 			</div>
@@ -47,103 +47,85 @@
 			<section class="skills" id="anchorskills">
 				<h1>Competences</h1>
 				<div class="tables">
-					<ul>
-						<li class="domaine">Developpement</li>
-						<li>CSS <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-						<li>HTML <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-						<li>JavaScript <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-						<li>Python <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-						<li>PHP <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-					</ul>
-					<ul>
-						<li class="domaine">Réseau</li>
-						<li>Adressage IP <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-						<li>Sous-réseaux <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-						<li>Infrastructure réseaux <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-					</ul>
-					<ul>
-						<li class="domaine">Langues</li>
-						<li>Francais <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star-half-stroke" style="color: #ffffff;"></i></li>
-						<li>Anglais <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star-half-stroke" style="color: #ffffff;"></i></li>
-						<li>Espagonl <i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-solid fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i><i class="fa-regular fa-star" style="color: #ffffff;"></i></li>
-					</ul>
+					<?php
+						$data=my_yaml_parse_file("../assets/yaml/skills.yaml");
+						//print_array($data);
+						foreach($data AS $domaine){
+							echo "<div class='domaine'><h2>".$domaine['domaine']."</h2>\n";
+							foreach($domaine["competences"] AS $competence=> $niveau){
+								echo "<p>".$competence;
+								$star = "solid";
+								for($i=1; $i < 6 ;$i++){
+									echo ' <img src="../assets/images/star-'.$star.'.svg" class="star">';
+									if($i >= $niveau){
+										$star ="regular";
+									}
+								}
+								echo "</p>\n";
+							}
+							echo "</div>";
+						}
+					?>
 				</div>
 			</section>
 			<section class="experiences" id="anchorexperience">
 				<h1>Job experiences</h1>
-				<div class="flip-card">
-					<div class="flip-card-inner">
-					  <div class="flip-card-front">
-						<img src="./../assets/images/logojob1.png" id="imgjob1">
-					  </div>
-					  <div class="flip-card-back">
+					<div class="job_wrapper" style="display:flex;">
 					  	<?php
 							$data=my_yaml_parse_file("../assets/yaml/jobs.yaml");
 							// print_array($data);
 							//print_array($data["job_desc"]);
 							foreach($data AS $jobs){
+								$imgsrc= $jobs["jobID"];
+								echo '<div class="flip-card" style="padding:2vh;"><div class="flip-card-inner"><div class="flip-card-front"><img src="./../assets/images/logojob'.$imgsrc.'.png" id="styleimg'.$imgsrc.'" style="border:2px solid black;"></div><div class="flip-card-back">';
 								echo "<p>".$jobs["poste"]."</p>\n";
 								echo "<p>".$jobs["entreprise"]."</p>\n";
 								echo "<p>".$jobs["dateStart"]."</p>\n";
 								echo "<p>".$jobs["dateEnd"]."</p>\n";
 								echo "<p>".$jobs["do_what"]."</p>\n";
+								echo '</div></div></div>';
 							}
 						?>
-						<p>Manutention, manipulations d'objets lourds/coupants</p><!-- do_what -->
-					  </div>
 					</div>
-				  </div>
 			</section>
-			<section id="Formation">
+			<section class="Formation" id="anchorform">
 				<h1>Formation</h1>
-				<div id="formationlist">
-					<div id="formation_gauche"> <!-- Séparer en 2 divs pour utiliser border pour ligne milieu -->
-						<div id="formationitem1">
-							<img src="#">
-							<h3>Baccalauréat scientifique</h3>
-							<p>Année d'obtention : 2017</p>
-							<p>Lycée Charles-Francois Lebrun</p>
-							<p>Coutances, Manche</p>
-							<p>Mention Assez Bien</p>
-						</div>
-						<div id="formationitem2">
-							<h3>Licence LLCER</h3>
-							<img src="#">
-							<p>2021-2022</p>
-							<p>Caen, Calvados</p>
-							<p>Langue anglaise, bases du russe</p>
-							<p>Année non terminé</p>
-						</div>
-					</div>
-					<div id="formation_droite">
-						<div id="formationitem3">
-							<h3>IUT STID</h3>
-							<img src="#">
-							<p>2018-2020</p>
-							<p>Lisieux, Orne</p>
-							<p>Statistiques et informatique décisionnelle</p>
-							<p>Non obtenu</p>
-							<p>Etudes statistiques, traitement de données</p>
-						</div>
-						<div id="formationitem4">
-							<h3>BTS SIO</h3>
-							<img src="#">
-							<p>2023-</p>
-							<p>Caen, Calvados</p>
-							<p>Services informatiques aux organisations</p>
-							<p>Réseaux, dev</p>
-						</div>
-					</div>
-				</div>
+					<?php
+					$data=my_yaml_parse_file("../assets/yaml/formation.yaml");
+					$compteur_div=0;
+					$position=array("gauche", "droite");
+					foreach($data AS $formation){
+						$item_compteur_row = $compteur_div + 1;
+						echo '<div class="formationitem'.$position[$compteur_div].'">';
+						echo "<h3>".$formation["formation"]."</h3>\n";
+						echo "<p>".$formation["date"]."</p>\n";
+						echo "<p>".$formation["etab"]."</p>\n";
+						echo "<p>".$formation["where"]."</p>\n";
+						echo "<p>".$formation["mention"]."</p>\n";
+						echo "</div>";
+						$compteur_div=($compteur_div+1)%2;
+					}
+					?>
+				
 			</section>
 			<section id="Contact">
 				<h1>Contact</h1>
 				<p>future php form</p>
-				<?php
+				<p>Passer par un serveur SMTP 
+					> utiliser l'adresse sts-sio relais SMTP
+					google smtp serveur
+					essayer les 2 ports 587 et 465
+					fct mail de php, php.ini 
+					integrer une librairie : captcha, PHPMailer
+					Utiliser composer : gestionnaire de dépendendances
 
+				</p>
+				<?php
+					include_once './../vendor/autoload.php';
+					use PHPMailer\PHPMailer\PHPMailer;
+					$mail = new PHPMailer();
 				?>
 			</section>
-		</div>	
 		<script src="https://kit.fontawesome.com/c9930ba331.js" crossorigin="anonymous"></script>
 	</body>
 </html>
