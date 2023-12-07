@@ -71,7 +71,6 @@ header li a:hover {
 .main {
     margin-top: 15vh;
     color:white;
-    display:flex;
     flex-direction: column;
 }
 
@@ -128,7 +127,7 @@ header li a:hover {
 .bg {
     border-radius: 25%;
     display:flex;
-    background-color: red;
+    background-color: green;
     align-items: center;
     justify-content: space-around;
     height:70%;
@@ -162,14 +161,13 @@ header li a:hover {
 /*-----------------------------------------------------------------------*/
 
 .tables {
+    width: 100vw;
     display:flex;
     justify-content: space-around;
-    width:100%;
 }
 
 .tables ul {
     list-style: none;
-
 }
 
 .tables li{
@@ -184,18 +182,24 @@ header li a:hover {
     background-color: lightblue;
 }
 
-
 .skills h1 {
     margin-top: 15vh;
     margin-bottom: 2em;
 }
 
-.tables .domaine {
-    color:red;
-    text-align: center;
-    font-size: 2em;
-    text-decoration: underline;
+.tables .star{
+    max-width: 12px;
+    max-height: 12px;
 }
+
+.tables .domaine {
+    flex-wrap: nowrap;
+}
+
+.tables p {
+    flex-wrap: nowrap;
+}
+
 
 /*-----------------------------------------------------------------------*/
 /* --------------------------------EXPERIENCE--------------------------- */
@@ -210,14 +214,16 @@ header li a:hover {
     padding-top:110px;
 }
 /* FLIP CARD > Aidé de W3C flipcard*/
+
 .flip-card {
     background-color: transparent;
     width: 300px; /* a changer */
     height: 200px;
-    perspective: 1000px; /* effet 3d */
+    perspective: 1000px; /* effet 3d peu importe ce qu'on met ici */
 }
   
 /* besoin pour positionner le front & back de la card */
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -228,11 +234,13 @@ header li a:hover {
 }
   
 /* Flip horizontal */
+
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
   
 .flip-card-front, .flip-card-back { /*position pour front */
+    
     position: absolute;
     width: 100%;
     height: 100%;
@@ -240,11 +248,13 @@ header li a:hover {
 }
   
 .flip-card-front { /* styles ici = if missing image */
+    
     background-color: transparent;
     color: black;
 }
   
 .flip-card-back { /*style image back -> text */
+    
     background-color: transparent;
     color: white;
     transform: rotateY(180deg);
@@ -257,50 +267,45 @@ header li a:hover {
     border:2px solid black;
 }
 
+#job_wrapper {
+    display:flex;
+    width:100%;
+    color:red;
+}
 /*-----------------------------------------------------------------------*/
 /* --------------------------------FORMATION---------------------------- */
 /*-----------------------------------------------------------------------*/
 
-#Formation {
+.Formation {
+    background-color: lightblue;
     height:100vh;
-    text-align: center;
-    background-color: lightcoral;
+    z-index:100;
 }
 
-#Formation h1 {
-    padding-top: 15vh;
-    margin-bottom: 5vh;
-}
-
-#timeline {
-    height:70vh;
-    width:100%;
-}
-
-#formation_droite {
-    border-left: 10px solid black;
-    padding-left: 5vw;
-}
-
-#formation_gauche {
-    padding-right: 5vw;
-}
-
-#formationlist {
-    display:flex;
-    justify-content: center;
-}
-
-#formationitem1 {
-    height:15vh;
-    margin-bottom: 20vh;
-}
-
-#formationitem3 {
+.Formation h1 {
     margin-top: 15vh;
-    margin-bottom:20vh;
+    margin-bottom: 2em;
+    text-align: center;
 }
 
+.formationitemdroite {
+    margin-left: 60%;
+}
+
+.formationitemgauche {
+    margin-right: 30%;
+    margin-left:30%;
+/*    border-right: 20px solid black;*/
+}
+
+.formationitemgauche, .formationitemdroite {
+    padding:1vw;
+    max-width: 50%;
+}
+
+#form_wrapper {
+    display:flex;
+}
 /*-----------------------------------------------------------------------*/
 /* --------------------------------CONTACT------------------------------ */
 /*-----------------------------------------------------------------------*/
