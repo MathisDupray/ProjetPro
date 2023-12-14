@@ -1,5 +1,5 @@
 <?php
-	$data=my_yaml_parse_file("../assets/yaml/jobs.yaml");
+	$data=yaml_parse_file("../assets/yaml/jobs.yaml");
 	// print_array($data);
 	//print_array($data["job_desc"]);
 	foreach($data AS $jobs){

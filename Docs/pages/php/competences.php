@@ -1,5 +1,5 @@
 <?php
-    $data=my_yaml_parse_file("../assets/yaml/skills.yaml");
+    $data=yaml_parse_file("../assets/yaml/skills.yaml");
     //print_array($data);
     foreach($data AS $domaine){
         echo "<div class='domaine'><h2>".$domaine['domaine']."</h2>\n";
