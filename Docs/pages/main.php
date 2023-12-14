@@ -1,4 +1,3 @@
-<?php require_once("../yaml/yaml.php"); ?>
 <!doctype html>
 <html lang="fr">
 	<head>
