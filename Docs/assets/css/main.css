@@ -115,7 +115,6 @@ header li a:hover {
 /*-----------------------------------------------------------------------*/
 
 .about {
-    background-color: lightgray;
     height: 100vh;
     display:flex;
     flex-direction: column;
@@ -127,7 +126,8 @@ header li a:hover {
 .bg {
     border-radius: 25%;
     display:flex;
-    background-color: green;
+    background: rgba(159, 99, 99, 0.2);
+    backdrop-filter: blur(5px);
     align-items: center;
     justify-content: space-around;
     height:70%;
@@ -151,8 +151,6 @@ header li a:hover {
 }
 
 #text {
-    background-color: green;
-    border-radius: 48% 52% 54% 46% / 38% 87% 13% 62%;
     padding:2em;
 }
 
@@ -179,7 +177,6 @@ header li a:hover {
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    background-color: lightblue;
 }
 
 .skills h1 {
@@ -190,6 +187,7 @@ header li a:hover {
 .tables .star{
     max-width: 12px;
     max-height: 12px;
+    color:white;
 }
 
 .tables .domaine {
@@ -206,7 +204,6 @@ header li a:hover {
 /*-----------------------------------------------------------------------*/
 
 .experiences {
-    background-color: lightgreen;
     height: 100vh;
     display:flex;
     flex-direction: column;
@@ -254,8 +251,8 @@ header li a:hover {
 }
   
 .flip-card-back { /*style image back -> text */
-    
-    background-color: transparent;
+    background: rgba(159, 99, 99, 0.2);
+    backdrop-filter: blur(5px);
     color: white;
     transform: rotateY(180deg);
     border:2px solid black;
@@ -272,12 +269,15 @@ header li a:hover {
     width:100%;
     color:red;
 }
+
+.flip-card {
+    padding:2vh;
+}
 /*-----------------------------------------------------------------------*/
 /* --------------------------------FORMATION---------------------------- */
 /*-----------------------------------------------------------------------*/
 
 .Formation {
-    background-color: lightblue;
     height:100vh;
     z-index:100;
 }
@@ -312,7 +312,6 @@ header li a:hover {
 
 #Contact {
     height:100vh;
-    background-color: lightgreen;
     text-align: center;
 }
 

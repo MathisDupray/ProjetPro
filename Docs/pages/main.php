@@ -5,6 +5,7 @@
 		<title>Projet pro</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="./../assets/css/main.css">
+		<script src="https://kit.fontawesome.com/c9930ba331.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header>
@@ -48,23 +49,7 @@
 				<h1>Competences</h1>
 				<div class="tables">
 					<?php
-						$data=my_yaml_parse_file("../assets/yaml/skills.yaml");
-						//print_array($data);
-						foreach($data AS $domaine){
-							echo "<div class='domaine'><h2>".$domaine['domaine']."</h2>\n";
-							foreach($domaine["competences"] AS $competence=> $niveau){
-								echo "<p>".$competence;
-								$star = "solid";
-								for($i=1; $i < 6 ;$i++){
-									echo ' <img src="../assets/images/star-'.$star.'.svg" class="star">';
-									if($i >= $niveau){
-										$star ="regular";
-									}
-								}
-								echo "</p>\n";
-							}
-							echo "</div>";
-						}
+						include("./php/competences.php");
 					?>
 				</div>
 			</section>
@@ -72,41 +57,15 @@
 				<h1>Job experiences</h1>
 					<div class="job_wrapper" style="display:flex;">
 					  	<?php
-							$data=my_yaml_parse_file("../assets/yaml/jobs.yaml");
-							// print_array($data);
-							//print_array($data["job_desc"]);
-							foreach($data AS $jobs){
-								$imgsrc= $jobs["jobID"];
-								echo '<div class="flip-card" style="padding:2vh;"><div class="flip-card-inner"><div class="flip-card-front"><img src="./../assets/images/logojob'.$imgsrc.'.png" id="styleimg'.$imgsrc.'" style="border:2px solid black;"></div><div class="flip-card-back">';
-								echo "<p>".$jobs["poste"]."</p>\n";
-								echo "<p>".$jobs["entreprise"]."</p>\n";
-								echo "<p>".$jobs["dateStart"]."</p>\n";
-								echo "<p>".$jobs["dateEnd"]."</p>\n";
-								echo "<p>".$jobs["do_what"]."</p>\n";
-								echo '</div></div></div>';
-							}
+							include("./php/jobs.php")
 						?>
 					</div>
 			</section>
 			<section class="Formation" id="anchorform">
 				<h1>Formation</h1>
 					<?php
-					$data=my_yaml_parse_file("../assets/yaml/formation.yaml");
-					$compteur_div=0;
-					$position=array("gauche", "droite");
-					foreach($data AS $formation){
-						$item_compteur_row = $compteur_div + 1;
-						echo '<div class="formationitem'.$position[$compteur_div].'">';
-						echo "<h3>".$formation["formation"]."</h3>\n";
-						echo "<p>".$formation["date"]."</p>\n";
-						echo "<p>".$formation["etab"]."</p>\n";
-						echo "<p>".$formation["where"]."</p>\n";
-						echo "<p>".$formation["mention"]."</p>\n";
-						echo "</div>";
-						$compteur_div=($compteur_div+1)%2;
-					}
-					?>
-				
+						include("./php/formation.php")
+					?>	
 			</section>
 			<section id="Contact">
 				<h1>Contact</h1>
@@ -118,14 +77,31 @@
 					fct mail de php, php.ini 
 					integrer une librairie : captcha, PHPMailer
 					Utiliser composer : gestionnaire de dépendendances
-
 				</p>
+				<h2>Contactez le</h2>
+					<form action="process-form.php" method="post">
+						<label for="name">Nom :</label>
+						<input type="text" id="name" name="name" required>
+
+						<br>
+
+						<label for="email">Email :</label>
+						<input type="email" id="email" name="email" required>
+
+						<br>
+
+						<label for="message">Message :</label>
+						<textarea id="message" name="message" rows="4" required></textarea>
+
+						<br>
+
+						<input type="submit" value="Envoyer">
+					</form>
 				<?php
-					include_once './../vendor/autoload.php';
+					include_once './../yaml/vendor/autoload.php';
 					use PHPMailer\PHPMailer\PHPMailer;
 					$mail = new PHPMailer();
 				?>
 			</section>
-		<script src="https://kit.fontawesome.com/c9930ba331.js" crossorigin="anonymous"></script>
 	</body>
 </html>

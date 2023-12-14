@@ -1,13 +1,13 @@
 - formation: "Baccalauréat scientifique"
-  date: 2017
+  date: "2017"
   etab: "Lycée Charles Francois Lebrun"
   where: Coutances, Manche
   mention: Mention AB
 
 - formation: "IUT STID"
-  date: 2018-2020
+  date: 2017-2020
   etab: "Statistiques et Informatique décisionelle"
-  where: lisieux, Orne
+  where: Lisieux, Orne
   mention: "Année non obtenue"
   
 - formation: "Licence LLCER"

@@ -1,12 +1,12 @@
-- poste: "opérateur sur machine"
+- poste: "Opérateur sur machine"
   jobID: 1
-  entreprise: dfdfdsf
-  dateStart: dsfdsfdsfds
-  dateEnd: dsfdsfdsfds
-  do_what: gfhgfhgfhgfh
-- poste : "testeteststes"
+  entreprise: Helios, Lessay, Manche
+  dateStart: To change, set real dates
+  dateEnd: To change, set real dates
+  do_what: Manipulation d'objets lourds et coupants. Commandes sur machine
+- poste : "Placeholder"
   jobID: 2
-  entreprise: dfdsfdsfdsfds
-  dateStart: fdsfdsfdsfs
-  dateEnd: dfdsfdsfdsfds
-  do_what: dgfdgfdgfd
+  entreprise: Placeholder
+  dateStart: Placeholder
+  dateEnd: Placeholder
+  do_what: Placeholder
