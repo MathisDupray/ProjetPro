@@ -33,7 +33,7 @@
 				<p>
 					Site fabriqué à partir de HTML, CSS, PHP et YAML
 				</p>
-				<img src="./../assets/images/welcome.jpg" id="imgwelcome">
+				<img src="./../assets/images/welcome.jpg" id="imgwelcome" alt="#">
 				<a href="#About"><i class="down fa-solid fa-arrow-down fa-4x" style="color: #ffffff;"></i></a>
 			</div>
 			<section class="about" id="About">
@@ -52,7 +52,7 @@
 						Je suis motivé par tout ce qui touche à la technologie
 						et j'ai toujours envie d'en apprendre plus.
 					</p>
-					<img id="aboutmeimg" src="./../assets/images/aboutme.jpg">
+					<img id="aboutmeimg" src="./../assets/images/aboutme.jpg" alt="#">
 				</div>
 			</section>
 			<section class="skills" id="anchorskills">
@@ -113,5 +113,6 @@
 					$mail = new PHPMailer();
 				?>
 			</section>
+		</div>
 	</body>
 </html>
