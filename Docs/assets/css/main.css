@@ -97,6 +97,7 @@ header li a:hover {
     margin-top: 1em;
     margin-bottom: 1em;
     padding:1em;
+    text-align: center;
 }
 
 .welcome p {
@@ -279,7 +280,6 @@ header li a:hover {
 
 .Formation {
     height:100vh;
-    z-index:100;
 }
 
 .Formation h1 {
