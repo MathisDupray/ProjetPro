@@ -20,7 +20,7 @@
 					<li><a href="#About">A propos</a></li>
 					<li><a href="#anchorskills">Compétences</a></li>
 					<li><a href="#anchorexperience">Experience</a></li>
-					<li><a href="#anchorform">Formation</a></li>
+					<li><a href="#anchorformation">Formation</a></li>
 					<li><a href="#Contact">Contact</a></li>
 				</ul>
 			</div>
@@ -71,7 +71,7 @@
 						?>
 					</div>
 			</section>
-			<section class="Formation" id="anchorform">
+			<section class="Formation" id="anchorformation">
 				<h1>Formation</h1>
 					<?php
 						include("./php/formation.php")
