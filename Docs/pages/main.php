@@ -28,19 +28,30 @@
 		</header>
 		<div class="main">
 			<div class="welcome">
-				<h1>Welcome to my port-folio</h1>
-				<h2>Trying to web dev</h2>
+				<h1>Bienvenue sur mon site perso</h1>
+				<h2>Developpeur en herbe</h2>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati reiciendis porro in modi natus error, perspiciatis et molestiae repudiandae possimus accusantium dolor unde hic provident laudantium voluptatibus. Rem, delectus!
+					Site fabriqué à partir de HTML, CSS, PHP et YAML
 				</p>
 				<img src="./../assets/images/welcome.jpg" id="imgwelcome">
 				<a href="#About"><i class="down fa-solid fa-arrow-down fa-4x" style="color: #ffffff;"></i></a>
 			</div>
 			<section class="about" id="About">
-				<h1>About</h1>
-				<p id="accroche">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi architecto, et doloremque sit cumque debitis temporibus non! Fugiat nobis eos, similique numquam odio obcaecati atque, optio libero maiores quod error?</p>
+				<h1>A propos</h1>
+				<p id="accroche">Je m'appelle Mathis Dupray, étudiant en BTS SIO à Caensup St Ursule et ce site contient des informations
+					à mon sujet. Vous y trouverez mes formations, compétences ainsi qu'un formulaire de contact
+				</p>
 				<div class="bg">
-					<p id="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, animi nulla unde libero voluptatem suscipit nobis. Minus explicabo ipsam placeat vitae doloremque harum odit! Atque vero nesciunt nam eveniet impedit?</p>
+					<p class="text">Dupray Mathis, 23 ans <br><a href="#">Mon CV</a>
+					</p>
+					<br>
+					<p class="text">
+						Developpeur en devenir et spécialiste systèmes et réseaux
+					</p>
+					<p class="text">
+						Je suis motivé par tout ce qui touche à la technologie
+						et j'ai toujours envie d'en apprendre plus.
+					</p>
 					<img id="aboutmeimg" src="./../assets/images/aboutme.jpg">
 				</div>
 			</section>

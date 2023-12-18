@@ -96,7 +96,6 @@ header li a:hover {
 .welcome h2 {
     margin-top: 1em;
     margin-bottom: 1em;
-    background-color: black;
     padding:1em;
 }
 
@@ -133,6 +132,7 @@ header li a:hover {
     height:70%;
     width:70%;
     margin-bottom: 10vh;
+    margin-top:2em;
 }
 
 .bg p {
@@ -150,7 +150,7 @@ header li a:hover {
     padding-top:15vh;
 }
 
-#text {
+.text {
     padding:2em;
 }
 
