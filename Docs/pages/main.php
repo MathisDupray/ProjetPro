@@ -38,12 +38,12 @@
 					Site fabriqué à partir de HTML, CSS, PHP et YAML
 				</p>
 				<img src="./../assets/images/welcome.jpg" id="imgwelcome" alt="#">
-				<a href="#About"><i class="down fa-solid fa-arrow-down fa-4x" style="color: #ffffff;"></i></a>
+				<a href="#About"><i class="downarrow fa-solid fa-arrow-down fa-4x" style="color: #ffffff;"></i></a>
 			</div>
 			<section class="about" id="About">
 				<h1>A propos</h1>
 				<p id="accroche">Je m'appelle Mathis Dupray, étudiant en BTS SIO à Caensup St Ursule et ce site contient des informations
-					à mon sujet. Vous y trouverez mes formations, compétences ainsi qu'un formulaire de contact
+					à mon sujet.</br> Vous y trouverez mes formations, compétences ainsi qu'un formulaire de contact
 				</p>
 				<div class="bg">
 					<p class="text">Dupray Mathis, 23 ans <br><a href="#">Mon CV</a>
@@ -69,7 +69,7 @@
 			</section>
 			<section class="experiences" id="anchorexperience">
 				<h1>Job experiences</h1>
-				<div class="job_wrapper" style="display:flex;">
+				<div class="job_wrapper">
 					<?php
 						include("./php/jobs.php")
 					?>
@@ -85,28 +85,37 @@
 			</section>
 			<section id="Contact">
 				<h1>Contact</h1>
-				<p>future php form</p>
-				<p>Passer par un serveur SMTP 
-					> utiliser l'adresse sts-sio relais SMTP
-					google smtp serveur
-					essayer les 2 ports 587 et 465
-					fct mail de php, php.ini 
-					integrer une librairie : captcha, PHPMailer
-					Utiliser composer : gestionnaire de dépendendances
-				</p>
-				<h2>Contactez le</h2>
+				<h2>Contactez moi !</h2>
+				<div class="formwrapper">
 				<form action="contact.php" method="post">
-    				<input type="text" name="to" value="myaddressmail@gmail.com">
+				<div class="to">
+					<p>Email</p>
+    				<input type="text" name="to" placeholder="myaddressmail@gmail.com">
+				</div>
+				<div class="sujet">
+					<p>Sujet</p>
     				<input type="text" name="subject" placeholder="Subject">
-    				<textarea name="body"></textarea>
-    				<button type="submit">Envoyer mail</button>
+				</div>
+				<div class="message">
+					<p>Message</p>
+    				<textarea name="body" rows="20" cols="50"></textarea>
+				</div>
+    				<button type="submit" id="submit_mail">Envoyer mail</button>
 				</form>
-				<?php
-					include_once './../assets/yaml/vendor/autoload.php';
-					use PHPMailer\PHPMailer\PHPMailer;
-					$mail = new PHPMailer();
-				?>
+				</div>
 			</section>
 		</div>
+		<footer>
+		<p>
+    		<a href="http://jigsaw.w3.org/css-validator/check/referer">
+        		<img style="border:0;width:88px;height:31px"
+            	src="http://jigsaw.w3.org/css-validator/images/vcss"
+				id="cssvalidator"
+            	alt="CSS Valide !" />
+    		</a>
+		</p>
+		<p class="textfooter">Port-folio réalisé dans le cadre de l'AP-PRO SLAM BTS SIO1 2023-2024</p>
+		<p class="textfooter">Mathis Dupray</p>
+		</footer>
 	</body>
 </html>

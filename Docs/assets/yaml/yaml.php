@@ -8,7 +8,7 @@ require_once('vendor/autoload.php');
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Yaml\Exception\ParseException;
 
-function my_yaml_parse_file($file){
+function yaml_parse_file($file){
 	try {
 		return Yaml::parseFile($file);
 	} catch (ParseException $exception) {

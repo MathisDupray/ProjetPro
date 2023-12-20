@@ -46,13 +46,14 @@ header li a{
 }
 
 header {
-    width:95%;
+    width:100vw;
     display:flex;
     flex-direction: column;
     align-items: center;
-    z-index:100; /* etre sur que c'est sur layer dessus */
     position:fixed;
     top:0;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,8,54,1) 20%);
 }
 
 header .headerlogo {
@@ -63,7 +64,7 @@ header .headerlogo {
 header li a:hover {
     background-color: rgba(212, 194, 194, 0.11);
     opacity: 0.8;
-    transition:0.2s;
+    transition:0.3s;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
@@ -88,8 +89,7 @@ header li a:hover {
 
 #imgwelcome {
     border-radius: 50%;
-    border:lightblue 5px solid;
-    box-shadow: 0.2em 0.2em 0.2em lightblue;
+    border:black 5px solid;
     max-width: 20%;
 }
 
@@ -107,7 +107,7 @@ header li a:hover {
     text-align: center;
 }
 
-.down {
+.downarrow {
     margin-top: 1em;
 }
 
@@ -117,11 +117,11 @@ header li a:hover {
 
 .about {
     height: 100vh;
+    max-height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
 }
 
 .bg {
@@ -135,11 +135,12 @@ header li a:hover {
     width:70%;
     margin-bottom: 10vh;
     margin-top:2em;
+    border:2px solid black;
 }
 
 .bg p {
     text-align: center;
-    max-width: 20%;
+    max-width: 13%;
 }
 
 #aboutmeimg {
@@ -156,8 +157,11 @@ header li a:hover {
     padding:2em;
 }
 
+#accroche {
+    text-align: center;
+}
 /*-----------------------------------------------------------------------*/
-/* --------------------------------SKILLS------------------------------- */
+/* --------------------------------COMPETENCES-------------------------- */
 /*-----------------------------------------------------------------------*/
 
 .tables {
@@ -171,6 +175,7 @@ header li a:hover {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    max-height:100vh;
 }
 
 .skills h1 {
@@ -184,16 +189,16 @@ header li a:hover {
     color:white;
 }
 
-.tables .domaine {
-    flex-wrap: nowrap;
-}
-
-.tables p {
-    flex-wrap: nowrap;
-}
-
 .tables{
     padding-top:15%;
+}
+
+.domaine h2{
+    margin-bottom:1em;
+}
+
+.domaine p{
+    text-align: center;
 }
 /*-----------------------------------------------------------------------*/
 /* --------------------------------EXPERIENCE--------------------------- */
@@ -201,23 +206,23 @@ header li a:hover {
 
 .experiences {
     height: 100vh;
+    max-height:100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
     padding-top:110px;
 }
-/* FLIP CARD > Aidé de W3C flipcard*/
+/* FLIP CARD > Aidé de W3C > flipcard*/
 
 .flip-card {
     background-color: transparent;
     width: 300px; /* a changer */
     height: 200px;
     perspective: 1000px; /* effet 3d peu importe ce qu'on met ici */
+    padding:2vh;
 }
-  
-/* besoin pour positionner le front & back de la card */
 
-.flip-card-inner {
+.flip-card-inner { /* besoin pour positionner le front & back de la card */
     position: relative;
     width: 100%;
     height: 100%;
@@ -225,15 +230,12 @@ header li a:hover {
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-  
-/* Flip horizontal */
 
-.flip-card:hover .flip-card-inner {
+.flip-card:hover .flip-card-inner { /* Flip horizontal */
     transform: rotateY(180deg);
 }
   
 .flip-card-front, .flip-card-back { /*position pour front */
-    
     position: absolute;
     width: 100%;
     height: 100%;
@@ -241,9 +243,7 @@ header li a:hover {
 }
   
 .flip-card-front { /* styles ici = if missing image */
-    
     background-color: transparent;
-    color: black;
 }
   
 .flip-card-back { /*style image back -> text */
@@ -254,20 +254,22 @@ header li a:hover {
     border:2px solid black;
 }
 
+.flip-card-back p {
+    padding:0.3em;
+}
+
 #imgjob1 {
     width:auto;
     height:100%;
     border:2px solid black;
 }
 
-#job_wrapper {
+.job_wrapper { /* positionnement des cartes */
     display:flex;
     width:100%;
-    color:red;
-}
-
-.flip-card {
-    padding:2vh;
+    margin-top:15%;
+    justify-content: center;
+    height:100%
 }
 
 /*-----------------------------------------------------------------------*/
@@ -292,12 +294,10 @@ header li a:hover {
 .formationitemgauche {
     margin-right: 30%;
     margin-left:30%;
-/*    border-right: 20px solid black;*/
 }
 
 .formationitemgauche, .formationitemdroite {
     padding:1vw;
-    max-width: 50%;
 }
 
 #form_wrapper {
@@ -309,10 +309,54 @@ header li a:hover {
 
 #Contact {
     height:100vh;
+}
+#Contact h1,h2 {
     text-align: center;
+}
+
+#Contact h2 {
+    padding-top:2em;
 }
 
 #Contact h1 {
     color:white;
     padding-top: 15vh;
+}
+
+#Contact .formwrapper {
+    padding-left: 10%;
+    padding-top:7%;
+}
+
+#Contact .to, .sujet, .message {
+    display:flex;
+    padding:1em;
+}
+
+#Contact p {
+    margin-right:2em;
+}
+
+#Contact #submit_mail {
+    margin-left:10%;
+    padding:0.5em;
+}
+
+/*-----------------------------------------------------------------------*/
+/* --------------------------------fOOTER------------------------------ */
+/*-----------------------------------------------------------------------*/
+
+footer {
+    background: rgba(45,68,131,0);
+    background: linear-gradient(90deg, rgba(45,68,131,1) 6%, rgba(67,86,170,1) 66%, rgba(43,100,189,1) 100%);
+    height:10vh;
+    margin-bottom:2vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textfooter {
+    color:white;
+    padding:1em;
 }
