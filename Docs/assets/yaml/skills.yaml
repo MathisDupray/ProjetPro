@@ -1,10 +1,10 @@
 - domaine: Developpement
   competences:
     CSS: 3
-    HTML: 3
-    Python: 3
+    HTML: 4
+    Python: 4
     PHP: 3
-    SQL: 3
+    SQL: 4
 - domaine: Langues
   competences:
     Anglais: 5
@@ -12,17 +12,11 @@
     Russe: 1
 - domaine: Réseau et systèmes
   competences:
-    Adressage: 4
-    Protocoles: 3.5
-    Infrastructure: 3
-    Services web: 3
+    Adressage IP: 4
+    Protocoles réseaux: 3.5
+    Architecture web: 3
 - domaine: Bureautique
   competences:
     Suite excel: 3
     Windows: 4
     Linux: 3
-- domaine: dsfdsfdsfdsfds
-  competences:
-    dfdsfds: 2
-    fdsfdsfdsfs: 2
-    dfdsfdsfdsfds: 2

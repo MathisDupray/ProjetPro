@@ -1,12 +1,12 @@
 - poste: "Opérateur sur machine"
   jobID: 1
   entreprise: Helios, Lessay, Manche
-  dateStart: To change, set real dates
-  dateEnd: To change, set real dates
+  dateStart: 2017 - Période d'interim
+  dateEnd: 2023 - En tout, ~16 mois
   do_what: Manipulation d'objets lourds et coupants. Commandes sur machine
-- poste : "Placeholder"
-  jobID: 2
-  entreprise: Placeholder
-  dateStart: Placeholder
-  dateEnd: Placeholder
-  do_what: Placeholder
+#- poste : "Placeholder" Pour tester l'integration avec le php
+#  jobID: 2
+#  entreprise: Placeholder
+#  dateStart: Placeholder
+#  dateEnd: Placeholder
+#  do_what: Placeholder
