@@ -166,14 +166,6 @@ header li a:hover {
     justify-content: space-around;
 }
 
-.tables ul {
-    list-style: none;
-}
-
-.tables li{
-    padding:1em;
-}
-
 .skills {
     display:flex;
     flex-direction: column;
@@ -200,7 +192,9 @@ header li a:hover {
     flex-wrap: nowrap;
 }
 
-
+.tables{
+    padding-top:15%;
+}
 /*-----------------------------------------------------------------------*/
 /* --------------------------------EXPERIENCE--------------------------- */
 /*-----------------------------------------------------------------------*/
