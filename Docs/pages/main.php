@@ -87,7 +87,7 @@
 				<h1>Contact</h1>
 				<h2>Contactez moi !</h2>
 				<div class="formwrapper">
-					<form action="contact.php" method="post">
+					<form action="./php/contact.php" method="post">
 					<div class="to">
 						<p>Email</p>
     					<input type="text" name="to" placeholder="myaddressmail@gmail.com">
@@ -104,7 +104,6 @@
 					</form>
 				</div>
 				<?php
-					include_once './vendor/autoload.php';
 					include("./php/contact.php"); 
 				?>
 			</section>
