@@ -1,15 +1,9 @@
 <?php
-include_once '../../assets/yaml/vendor/autoload.php';
+include_once './../vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use \PHPMailer\PHPMailer\SMTP;
  
 ?>
-<form action="contact.php" method="post">
-    <input type="text" name="to" value="myaddressmail@gmail.com">
-    <input type="text" name="subject" placeholder="Subject">
-    <textarea name="body"></textarea>
-    <button type="submit">Envoyer mail</button>
-</form>
 <?php
  
 if(!empty($_POST)) {
@@ -22,14 +16,14 @@ if(!empty($_POST)) {
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth = true;                                   //Enable SMTP authentication
-        $mail->Username = 'jcheron@sts-sio-caen.info';             //SMTP username
+        $mail->Username = 'mathis.dupray@sts-sio-caen.info';             //SMTP username
         $mail->Password = 'yourPassword';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
  
         //Recipients
-        $mail->setFrom('jcheron@sts-sio-caen.info', 'Mailer');
-        $mail->addAddress($_POST['to']??'jcheron@sts-sio-caen.info');     //Add a recipient
+        $mail->setFrom('mathis.dupray@sts-sio-caen.info', 'Mailer');
+        $mail->addAddress($_POST['to']??'mathis.dupray@sts-sio-caen.info');     //Add a recipient
  
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML

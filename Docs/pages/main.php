@@ -85,6 +85,7 @@
 			</section>
 			<section id="Contact">
 				<h1>Contact</h1>
+<<<<<<< HEAD
 				<h2>Contactez moi !</h2>
 				<div class="formwrapper">
 				<form action="contact.php" method="post">
@@ -94,6 +95,20 @@
 				</div>
 				<div class="sujet">
 					<p>Sujet</p>
+=======
+				<p>future php form</p>
+				<p>Passer par un serveur SMTP 
+					> utiliser l'adresse sts-sio relais SMTP
+					google smtp serveur
+					essayer les 2 ports 587 et 465
+					fct mail de php, php.ini 
+					integrer une librairie : captcha, PHPMailer
+					Utiliser composer : gestionnaire de dépendendances
+				</p>
+				<h2>Contactez le</h2>
+				<form action="php/contact.php" method="post">
+    				<input type="text" name="to" value="myaddressmail@gmail.com">
+>>>>>>> b698d1b3a378571f2d36e2571482ea1890c92d27
     				<input type="text" name="subject" placeholder="Subject">
 				</div>
 				<div class="message">
@@ -102,7 +117,14 @@
 				</div>
     				<button type="submit" id="submit_mail">Envoyer mail</button>
 				</form>
+<<<<<<< HEAD
 				</div>
+=======
+				<?php
+					include_once './vendor/autoload.php';
+					include("./php/contact.php"); 
+				?>
+>>>>>>> b698d1b3a378571f2d36e2571482ea1890c92d27
 			</section>
 		</div>
 		<footer>
