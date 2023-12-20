@@ -95,16 +95,15 @@
 					Utiliser composer : gestionnaire de dépendendances
 				</p>
 				<h2>Contactez le</h2>
-				<form action="contact.php" method="post">
+				<form action="php/contact.php" method="post">
     				<input type="text" name="to" value="myaddressmail@gmail.com">
     				<input type="text" name="subject" placeholder="Subject">
     				<textarea name="body"></textarea>
     				<button type="submit">Envoyer mail</button>
 				</form>
 				<?php
-					include_once './../assets/yaml/vendor/autoload.php';
-					use PHPMailer\PHPMailer\PHPMailer;
-					$mail = new PHPMailer();
+					include_once './vendor/autoload.php';
+					include("./php/contact.php"); 
 				?>
 			</section>
 		</div>
