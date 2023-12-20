@@ -1,5 +1,5 @@
-<?php require_once("../assets/yaml/yaml.php");
-?>
+<?php /*require_once("../assets/yaml/yaml.php");
+*/?>
 <!doctype html>
 <html lang="fr">
 	<head>
