@@ -1,3 +1,5 @@
+<?php require_once("../assets/yaml/yaml.php");
+?>
 <!doctype html>
 <html lang="fr">
 	<head>
@@ -29,6 +31,8 @@
 		<div class="main">
 			<div class="welcome">
 				<h1>Bienvenue sur mon site perso</h1>
+				<?php
+				?>
 				<h2>Developpeur en herbe</h2>
 				<p>
 					Site fabriqué à partir de HTML, CSS, PHP et YAML
@@ -65,17 +69,19 @@
 			</section>
 			<section class="experiences" id="anchorexperience">
 				<h1>Job experiences</h1>
-					<div class="job_wrapper" style="display:flex;">
-					  	<?php
-							include("./php/jobs.php")
-						?>
-					</div>
+				<div class="job_wrapper" style="display:flex;">
+					<?php
+						include("./php/jobs.php")
+					?>
+				</div>
 			</section>
 			<section class="Formation" id="anchorformation">
 				<h1>Formation</h1>
+				<div class="formationwrapper">
 					<?php
 						include("./php/formation.php")
-					?>	
+					?>
+				</div>
 			</section>
 			<section id="Contact">
 				<h1>Contact</h1>
@@ -89,26 +95,14 @@
 					Utiliser composer : gestionnaire de dépendendances
 				</p>
 				<h2>Contactez le</h2>
-					<form action="process-form.php" method="post">
-						<label for="name">Nom :</label>
-						<input type="text" id="name" name="name" required>
-
-						<br>
-
-						<label for="email">Email :</label>
-						<input type="email" id="email" name="email" required>
-
-						<br>
-
-						<label for="message">Message :</label>
-						<textarea id="message" name="message" rows="4" required></textarea>
-
-						<br>
-
-						<input type="submit" value="Envoyer">
-					</form>
+				<form action="contact.php" method="post">
+    				<input type="text" name="to" value="myaddressmail@gmail.com">
+    				<input type="text" name="subject" placeholder="Subject">
+    				<textarea name="body"></textarea>
+    				<button type="submit">Envoyer mail</button>
+				</form>
 				<?php
-					include_once './../yaml/vendor/autoload.php';
+					include_once './../assets/yaml/vendor/autoload.php';
 					use PHPMailer\PHPMailer\PHPMailer;
 					$mail = new PHPMailer();
 				?>
