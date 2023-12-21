@@ -56,8 +56,9 @@
             	alt="CSS Valide !">
     		</a>
 		</p>
-		<p class="textfooter">Port-folio réalisé dans le cadre de l'AP-PRO SLAM BTS SIO1 2023-2024</p>
-		<p class="textfooter">Mathis Dupray</p>
+			<?php
+				include("./php/footer.php");
+			?>
 		</footer>
 	</body>
 </html>
