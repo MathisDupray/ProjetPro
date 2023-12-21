@@ -6,7 +6,6 @@
         echo "<h2>".$ligne["accroche"]."</h2>";
         echo "<p>".$ligne["desc"]."</p>";
         echo "<img src='".$ligne["imgwelcome"]."' id='imgwelcome' alt='#'>";
-        echo "<a href='#anchorapropos'><i class='downarrow fa-solid fa-arrow-down fa-4x' style='color: #ffffff;'></i></a>";
         echo "</section>";
     }
 ?>

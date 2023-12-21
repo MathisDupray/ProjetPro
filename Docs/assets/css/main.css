@@ -79,6 +79,16 @@ header li a:hover {
     color:white;
     flex-direction: column;
 }
+.arrow-container {
+    position: fixed;
+    bottom: 10vh;
+    right: 10vw;
+    cursor: pointer;
+}
+#scroll-arrow i {
+    font-size: 4rem; /* Adjust the size as needed */
+    color: #ffffff; /* Change color as needed */
+}
 
 /*-----------------------------------------------------------------------*/
 /* --------------------------------WELCOME------------------------------ */

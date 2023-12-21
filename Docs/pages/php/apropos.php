@@ -10,6 +10,5 @@
         echo "<a href='".$ligne["lien"]."'>";
         echo "<img src='".$ligne["lienimage"]."' id='gitlogo' alt='Github'></a></div>";
         echo "<img src='".$ligne["aboutmeimg"]."' alt='#' id='aboutmeimg'></div>";
-        echo "<a href='#anchorapropos'><i class='downarrow fa-solid fa-arrow-down fa-4x' style='color: #ffffff;'></i></a>";
     }
 ?>

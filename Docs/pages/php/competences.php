@@ -15,5 +15,4 @@ foreach ($data as $domaine) {
     echo "</div>";
 }
 echo "</div>";
-echo "<a href='#anchorapropos'><i class='downarrow fa-solid fa-arrow-down fa-4x' style='color: #ffffff;'></i></a>";
 ?>
