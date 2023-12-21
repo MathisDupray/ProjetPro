@@ -1,5 +1,5 @@
 <?php
-	$data=yaml_parse_file("../assets/yaml/jobs.yaml");
+	$data=yaml_parse_file("../assets/data/jobs.yaml");
 	foreach($data AS $jobs){
 		$imgsrc= $jobs["jobID"];
 		echo '<div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><img src="./../assets/images/logojob'.$imgsrc.'.png" id="styleimg'.$imgsrc.'" style="border:2px solid black;"></div><div class="flip-card-back">';

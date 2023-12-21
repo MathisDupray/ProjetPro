@@ -1,5 +1,5 @@
 <?php
-    $data = yaml_parse_file("../assets/yaml/skills.yaml");
+    $data = yaml_parse_file("../assets/data/skills.yaml");
     $maxSkillLevel = 10;
     foreach ($data as $domaine) {
         echo "<div class='domaine'><h2>".$domaine['domaine']."</h2>\n";

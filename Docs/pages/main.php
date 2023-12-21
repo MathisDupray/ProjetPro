@@ -1,5 +1,5 @@
-<?php/* require_once("../assets/yaml/yaml.php");
-*/?>
+<?php require_once("../libraries/yaml.php");
+?>
 <!doctype html>
 <html lang="fr">
 	<head>
@@ -46,16 +46,18 @@
 					à mon sujet.</br> Vous y trouverez mes formations, compétences ainsi qu'un formulaire de contact
 				</p>
 				<div class="bg">
-					<p class="text">Dupray Mathis, 23 ans <br><a href="#">Mon CV</a>
+					<p class="text">Dupray Mathis, 23 ans <br><a href="#">Mon CV</a></br>
+					Developpeur en devenir et spécialiste systèmes et réseaux
 					</p>
-					<br>
-					<p class="text">
-						Developpeur en devenir et spécialiste systèmes et réseaux
-					</p>
-					<p class="text">
+					<span id="about_textgit">
+						<p class="text">
 						Je suis motivé par tout ce qui touche à la technologie
 						et j'ai toujours envie d'en apprendre plus.
-					</p>
+						</p>
+						<a href="https://github.com/MathisDupray/ProjetPro">
+  							<img src="./../assets/images/github.svg" id="gitlogo" alt="Github">
+						</a>
+					</span>
 					<img id="aboutmeimg" src="./../assets/images/aboutme.jpg" alt="#">
 				</div>
 			</section>
@@ -71,7 +73,7 @@
 				<h1>Job experiences</h1>
 				<div class="job_wrapper">
 					<?php
-						include("./php/jobs.php")
+						 include("./php/jobs.php");
 					?>
 				</div>
 			</section>
@@ -79,7 +81,7 @@
 				<h1>Formation</h1>
 				<div class="formationwrapper">
 					<?php
-						include("./php/formation.php")
+						include("./php/formation.php");
 					?>
 				</div>
 			</section>
@@ -98,7 +100,7 @@
 					</div>
 					<div class="message">
 						<p>Message</p>
-    					<textarea name="body" rows="20" cols="50"></textarea>
+    					<textarea name="body" rows="10" cols="50"></textarea>
 					</div>
     				<button type="submit" id="submit_mail">Envoyer mail</button>
 					</form>

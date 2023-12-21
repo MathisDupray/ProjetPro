@@ -1,5 +1,5 @@
 <?php
-	$data=yaml_parse_file("../assets/yaml/formation.yaml");
+	$data=yaml_parse_file("../assets/data/formation.yaml");
 	$compteur_div=0;
 	$position=array("gauche", "droite");
 	foreach($data AS $formation){
