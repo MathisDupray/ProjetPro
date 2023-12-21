@@ -143,6 +143,13 @@ header li a:hover {
     border:2px solid black;
 }
 
+@media only screen and (max-width:950px){
+.bg p,#aboutmeimg {
+	max-width:100%;
+	overflow-x:hidden;
+	}
+}
+
 .bg p {
     text-align: center;
     max-width: 13%;
