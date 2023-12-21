@@ -12,5 +12,5 @@
 		echo "<p>".$jobs["do_what"]."</p>\n";
 		echo '</div></div></div>';
 	}
-	echo "</div>;"
+	echo "</div>";
 ?>

@@ -8,36 +8,22 @@
 		<link rel="stylesheet" href="./../assets/css/main.css">
 		<script src="https://kit.fontawesome.com/c9930ba331.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
+	<body id="anchoraccueil">
 		<header>
-			<div id="navbar">
-				<ul>
-					<li><i class="headerlogo fa-brands fa-html5 fa-4x" style="color: #ffffff;"></i></li>
-					<li><i class="headerlogo fa-brands fa-css3-alt fa-4x" style="color: #ffffff;"></i></li>
-					<li><i class="headerlogo fa-brands fa-php fa-4x" style="color: #ffffff;"></i></li>
-					<li><i class="headerlogo fa-solid fa-database fa-4x" style="color: #ffffff;"></i></li>
-				</ul>
-				<ul>
-					<li><a href="#">Accueil</a></li>
-					<li><a href="#About">A propos</a></li>
-					<li><a href="#anchorskills">Compétences</a></li>
-					<li><a href="#anchorexperience">Experience</a></li>
-					<li><a href="#anchorformation">Formation</a></li>
-					<li><a href="#Contact">Contact</a></li>
-				</ul>
-			</div>
-			<hr class="splitbar">
+			<?php
+				include("./php/navbar.php");
+			?>
 		</header>
 		<div class="main">
 				<?php
 					include("./php/accueil.php");
 				?>
-			<section class="about" id="About">
+			<section class="about" id="anchorapropos">
 				<?php
 					include("./php/apropos.php");
 				?>
 			</section>
-			<section class="skills" id="anchorskills">
+			<section class="skills" id="anchorcompetences">
 				<?php
 					include("./php/competences.php");
 				?>
@@ -52,7 +38,7 @@
 					include("./php/formation.php");
 				?>
 			</section>
-			<section id="Contactform">
+			<section class="Contactform" id="anchorcontact">
 				<?php 
 					include("./php/contactform.php");
 				?>
