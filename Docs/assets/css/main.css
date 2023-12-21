@@ -16,6 +16,11 @@ html {
     scroll-behavior: smooth; /* transition "smooth" pour les href */
 }
 
+@media (max-width: 2000px) {
+    body {
+        background-size: 2000px; /* Set the minimum width for the background image */
+    }
+}
 /*-----------------------------------------------------------------------*/
 /* --------------------------------HEADER------------------------------- */
 /*-----------------------------------------------------------------------*/
