@@ -29,82 +29,33 @@
 			<hr class="splitbar">
 		</header>
 		<div class="main">
-			<div class="welcome">
-				<h1>Bienvenue sur mon site perso</h1>
 				<?php
+					include("./php/accueil.php");
 				?>
-				<h2>Developpeur en herbe</h2>
-				<p>
-					Site fabriqué à partir de HTML, CSS, PHP et YAML
-				</p>
-				<img src="./../assets/images/welcome.jpg" id="imgwelcome" alt="#">
-				<a href="#About"><i class="downarrow fa-solid fa-arrow-down fa-4x" style="color: #ffffff;"></i></a>
-			</div>
 			<section class="about" id="About">
-				<h1>A propos</h1>
-				<p id="accroche">Je m'appelle Mathis Dupray, étudiant en BTS SIO à Caensup St Ursule et ce site contient des informations
-					à mon sujet.</br> Vous y trouverez mes formations, compétences ainsi qu'un formulaire de contact
-				</p>
-				<div class="bg">
-					<p class="text">Dupray Mathis, 23 ans <br><a href="#">Mon CV</a></br>
-					Developpeur en devenir et spécialiste systèmes et réseaux
-					</p>
-					<span id="about_textgit">
-						<p class="text">
-						Je suis motivé par tout ce qui touche à la technologie
-						et j'ai toujours envie d'en apprendre plus.
-						</p>
-						<a href="https://github.com/MathisDupray/ProjetPro">
-  							<img src="./../assets/images/github.svg" id="gitlogo" alt="Github">
-						</a>
-					</span>
-					<img id="aboutmeimg" src="./../assets/images/aboutme.jpg" alt="#">
-				</div>
+				<?php
+					include("./php/apropos.php");
+				?>
 			</section>
 			<section class="skills" id="anchorskills">
-				<h1>Competences</h1>
-				<div class="tables">
-					<?php
-						include("./php/competences.php");
-					?>
-				</div>
+				<?php
+					include("./php/competences.php");
+				?>
 			</section>
 			<section class="experiences" id="anchorexperience">
-				<h1>Job experiences</h1>
-				<div class="job_wrapper">
-					<?php
-						 include("./php/jobs.php");
-					?>
-				</div>
+				<?php
+					include("./php/jobs.php");
+				?>
 			</section>
 			<section class="Formation" id="anchorformation">
-				<h1>Formation</h1>
-				<div class="formationwrapper">
-					<?php
-						include("./php/formation.php");
-					?>
-				</div>
+				<?php
+					include("./php/formation.php");
+				?>
 			</section>
-			<section id="Contact">
-				<h1>Contact</h1>
-				<h2>Contactez moi !</h2>
-				<div class="formwrapper">
-					<form action="./php/contact.php" method="post">
-					<div class="to">
-						<p>Email</p>
-    					<input type="text" name="to" placeholder="myaddressmail@gmail.com">
-					</div>
-					<div class="sujet">
-						<p>Sujet</p>
-    					<input type="text" name="subject" placeholder="Subject">
-					</div>
-					<div class="message">
-						<p>Message</p>
-    					<textarea name="body" rows="10" cols="50"></textarea>
-					</div>
-    				<button type="submit" id="submit_mail">Envoyer mail</button>
-					</form>
-				</div>
+			<section id="Contactform">
+				<?php 
+					include("./php/contactform.php");
+				?>
 				<?php
 					include("./php/contact.php"); 
 				?>

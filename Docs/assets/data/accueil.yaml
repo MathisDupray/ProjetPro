@@ -1,0 +1,5 @@
+- titre: "Bienvenue sur le site de "
+  qui: Mathis Dupray
+  accroche: Developpeur en herbe
+  desc: Site fabriqué à partir de HTML, CSS, YAML, PHP
+  imgwelcome: ./../assets/images/welcome.jpg

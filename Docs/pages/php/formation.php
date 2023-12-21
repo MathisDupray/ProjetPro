@@ -2,6 +2,8 @@
 	$data=yaml_parse_file("../assets/data/formation.yaml");
 	$compteur_div=0;
 	$position=array("gauche", "droite");
+	echo "<h1>Formation</h1>";
+	echo "<div class='formationwrapper'>";
 	foreach($data AS $formation){
 		$item_compteur_row = $compteur_div + 1;
 		echo '<div class="formationitem'.$position[$compteur_div].'">';
@@ -13,4 +15,5 @@
 		echo "</div>";
 		$compteur_div=($compteur_div+1)%2;
     }
+	echo "</div>";
 ?>

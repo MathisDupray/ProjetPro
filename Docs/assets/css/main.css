@@ -359,37 +359,37 @@ header li a:hover {
 /* --------------------------------CONTACT------------------------------ */
 /*-----------------------------------------------------------------------*/
 
-#Contact {
+#Contactform {
     height:100vh;
 }
-#Contact h1,h2 {
+#Contactform h1,h2 {
     text-align: center;
 }
 
-#Contact h2 {
+#Contactform h2 {
     padding-top:2em;
 }
 
-#Contact h1 {
+#Contactform h1 {
     color:white;
     padding-top: 15vh;
 }
 
-#Contact .formwrapper {
+#Contactform .formwrapper {
     padding-left: 10%;
     padding-top:7%;
 }
 
-#Contact .to, .sujet, .message {
+#Contactform .to, .sujet, .message {
     display:flex;
     padding:1em;
 }
 
-#Contact p {
+#Contactform p {
     margin-right:2em;
 }
 
-#Contact #submit_mail {
+#Contactform #submit_mail {
     margin-left:10%;
     padding:0.5em;
 }
