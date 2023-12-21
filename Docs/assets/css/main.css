@@ -183,23 +183,40 @@ header li a:hover {
     margin-bottom: 2em;
 }
 
-.tables .star{
-    max-width: 12px;
-    max-height: 12px;
-    color:white;
+.domaine {
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 10vw;
+    margin: 0 auto;
+}
+
+.progress {
+    height: 1em;
+    position: relative;
+}
+
+.gradient-bar {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(133, 148, 189, 1) 6%, rgba(54, 62, 175, 1) 50%, rgba(43, 100, 189, 1) 85%);
+}
+
+.competence-name {
+    text-align: center;
 }
 
 .tables{
-    padding-top:15%;
+    padding-top:7%;
 }
 
 .domaine h2{
     margin-bottom:1em;
 }
 
-.domaine p{
-    text-align: center;
-}
 /*-----------------------------------------------------------------------*/
 /* --------------------------------EXPERIENCE--------------------------- */
 /*-----------------------------------------------------------------------*/

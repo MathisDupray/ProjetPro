@@ -1,22 +1,22 @@
 - domaine: Developpement
   competences:
-    CSS: 3
-    HTML: 4
-    Python: 4
-    PHP: 3
-    SQL: 4
+    CSS: 7
+    HTML: 8
+    Python: 7
+    PHP: 6
+    SQL: 8
 - domaine: Langues
   competences:
-    Anglais: 5
-    Espagnol: 2
-    Russe: 1
+    Anglais: 10
+    Espagnol: 4
+    Russe: 3
 - domaine: Réseau et systèmes
   competences:
-    Adressage IP: 4
-    Protocoles réseaux: 3.5
-    Architecture web: 3
+    Adressage IP: 9
+    Protocoles réseaux: 7
+    Architecture web: 6
 - domaine: Bureautique
   competences:
-    Suite excel: 3
-    Windows: 4
-    Linux: 3
+    Suite excel: 8
+    Windows: 9
+    Linux: 7
