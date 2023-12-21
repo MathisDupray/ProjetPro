@@ -53,7 +53,7 @@
         		<img style="border:0;width:88px;height:31px"
             	src="http://jigsaw.w3.org/css-validator/images/vcss"
 				id="cssvalidator"
-            	alt="CSS Valide !" />
+            	alt="CSS Valide !">
     		</a>
 		</p>
 		<p class="textfooter">Port-folio réalisé dans le cadre de l'AP-PRO SLAM BTS SIO1 2023-2024</p>
