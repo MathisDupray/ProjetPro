@@ -1,5 +1,4 @@
 <?php
-$recaptcha_secret_key = '6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP'; // Pas bien, masi pas de variables d'environnement a moins de créer des github actions.
 echo "<h1>Contact</h1>";
 echo "<h2>Contactez moi !</h2>";
 echo "<div class='formwrapper'>";
