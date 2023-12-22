@@ -1,9 +1,7 @@
 <?php
-include_once('../vendor/autoload.php');
+include_once('./../vendor/autoload.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use \PHPMailer\PHPMailer\SMTP;
-error_reporting(E_ALL);
-ini_set('display_errors', true);
 
  
 ?>
