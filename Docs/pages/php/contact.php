@@ -5,44 +5,6 @@ require_once __DIR__ . './../vendor/phpmailer/phpmailer/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-$recaptcha_secret_key = "6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP";
-// C'est pas bien mais pas le choix car
-// pas de variables d'environnement dispo
-
-if (!isset($recaptcha_secret_key) || empty($recaptcha_secret_key)) {
-    // Si mal config
-    die('reCAPTCHA secret key is missing or empty.');
-}
-
-// Validation reCAPTCHA reponse
-$recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
-
-// server-side reCAPTCHA verification
-$recaptcha_verify_url = 'https://www.google.com/recaptcha/api/siteverify';
-$recaptcha_data = [
-    'secret'   => $recaptcha_secret_key,
-    'response' => $recaptcha_response,
-];
-
-$recaptcha_options = [
-    'http' => [
-        'method' => 'POST',
-        'header' => 'Content-type: application/x-www-form-urlencoded',
-        'content' => http_build_query($recaptcha_data),
-    ],
-];
-
-$recaptcha_context = stream_context_create($recaptcha_options);
-$recaptcha_result = file_get_contents($recaptcha_verify_url, false, $recaptcha_context);
-$recaptcha_result_data = json_decode($recaptcha_result, true);
-
-if (!$recaptcha_result_data['success']) {
-    // si fail
-    die('reCAPTCHA verification failed.');
-}
-
-// Proceed with sending email if reCAPTCHA verification is successful
-
 if (!empty($_POST)) {
     $mail = new PHPMailer(true);
     try {
