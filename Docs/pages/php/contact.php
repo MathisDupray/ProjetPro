@@ -1,4 +1,5 @@
 <?php
+include_once("./../vendor/autoload.php");
 use PHPMailer\PHPMailer;
 use \PHPMailer\PHPMailer\SMTP;
 
