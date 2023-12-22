@@ -1,5 +1,5 @@
 <?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $recaptchaSecretKey = "YOUR_RECAPTCHA_SECRET_KEY";
+    $recaptchaSecretKey = "6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP";
     $recaptchaResponse = $_POST["g-recaptcha-response"];
 
     // Make a POST request to the reCAPTCHA API

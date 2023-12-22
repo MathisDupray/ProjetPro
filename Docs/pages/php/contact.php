@@ -7,9 +7,6 @@ use PHPMailer\PHPMailer\SMTP;
  
 ?>
 <?php
-if (!class_exists('PHPMailer\\PHPMailer\\PHPMailer')) {
-    die('PHPMailer class not found. Autoloader issue.');
-}
 if(!empty($_POST)) { 
     $mail = new PHPMailer(true);
     try {
