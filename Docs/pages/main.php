@@ -47,7 +47,7 @@
 					include("./php/contactform.php");
 				?>
 				<?php
-					include("./php/contact.php"); 
+					/*include("./php/contact.php"); */
 				?>
 			</section>
 		</div>
