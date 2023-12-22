@@ -1,5 +1,4 @@
 <?php
-include_once("./../vendor/autoload.php");
 use PHPMailer\PHPMailer;
 use \PHPMailer\PHPMailer\SMTP;
 
@@ -7,10 +6,8 @@ use \PHPMailer\PHPMailer\SMTP;
 ?>
 <?php
  
-if(!empty($_POST)) {
- 
+if(!empty($_POST)) { 
     $mail = new PHPMailer(true);
- 
     try {
         //Server settings
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
