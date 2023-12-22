@@ -5,13 +5,18 @@ require_once __DIR__ . './../vendor/phpmailer/phpmailer/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-// Get reCAPTCHA secret key from environment variable --> 
-// Pas pu le faire car pas de variables d'environnement disponibles
-$recaptcha_secret_key = "6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP";
+// Get reCAPTCHA secret key from environment variable
+$recaptcha_secret_key = getenv('RECAPTCHA_SECRET_KEY');
 
-// Validation reCAPTCHA réponse
+if (!isset($recaptcha_secret_key) || empty($recaptcha_secret_key)) {
+    // Handle the case where the reCAPTCHA secret key is not properly configured
+    die('reCAPTCHA secret key is missing or empty.');
+}
+
+// Validate reCAPTCHA response
 $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
 
+// Perform server-side reCAPTCHA verification
 $recaptcha_verify_url = 'https://www.google.com/recaptcha/api/siteverify';
 $recaptcha_data = [
     'secret'   => $recaptcha_secret_key,
@@ -30,10 +35,12 @@ $recaptcha_context = stream_context_create($recaptcha_options);
 $recaptcha_result = file_get_contents($recaptcha_verify_url, false, $recaptcha_context);
 $recaptcha_result_data = json_decode($recaptcha_result, true);
 
+if (!$recaptcha_result_data['success']) {
+    // Handle the case where reCAPTCHA verification fails
+    die('reCAPTCHA verification failed.');
+}
+
 // Proceed with sending email if reCAPTCHA verification is successful
-
-
-// PHPMAILER
 
 if (!empty($_POST)) {
     $mail = new PHPMailer(true);
@@ -60,6 +67,6 @@ if (!empty($_POST)) {
         $mail->send();
         echo 'Message has been sent';
     } catch (Exception $e) {
-        echo "Le message n'a pas pu être envoyé du à l'absence d'authentification sur le serveur SMTP :  {$mail->ErrorInfo}";
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
