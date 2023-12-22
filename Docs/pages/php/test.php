@@ -1,9 +1,34 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-require_once __DIR__ . './../vendor/autoload.php';
+<?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $recaptchaSecretKey = "YOUR_RECAPTCHA_SECRET_KEY";
+    $recaptchaResponse = $_POST["g-recaptcha-response"];
 
-use PHPMailer\PHPMailer\PHPMailer;
+    // Make a POST request to the reCAPTCHA API
+    $url = "https://www.google.com/recaptcha/api/siteverify";
+    $data = [
+        "secret" => $recaptchaSecretKey,
+        "response" => $recaptchaResponse,
+    ];
 
-$mailer = new PHPMailer();
-echo 'Test script executed successfully.';
+    $options = [
+        "http" => [
+            "header" => "Content-type: application/x-www-form-urlencoded\r\n",
+            "method" => "POST",
+            "content" => http_build_query($data),
+        ],
+    ];
+
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    $response = json_decode($result, true);
+
+    if ($response["success"] == true) {
+        // reCAPTCHA verification successful, process your form data
+        // ...
+        echo "reCAPTCHA verification successful.";
+    } else {
+        // reCAPTCHA verification failed, handle accordingly
+        // ...
+        echo "reCAPTCHA verification failed.";
+    }
+}
+?>

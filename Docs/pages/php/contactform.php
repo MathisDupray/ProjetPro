@@ -19,6 +19,7 @@
             echo "<textarea name='body' rows='10' cols='50'></textarea>";
         echo "</div>";
         echo "<div class='g-recaptcha' data-sitekey='6LeK6DkpAAAAAL1VLNtCir0-V331rtUcOLayu7IU'></div>";
+        include_once("test.php");
         echo "<button type='submit' value='Submit' name='ok' id='submit_mail'>Envoyer mail</button>";
         echo "</form>";
 	echo "</div>";
