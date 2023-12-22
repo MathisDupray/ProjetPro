@@ -25,7 +25,7 @@ echo "</div>";
 // reCAPTCHA
 echo "<div class='g-recaptcha' data-sitekey='6LeK6DkpAAAAAL1VLNtCir0-V331rtUcOLayu7IU'></div>";
 
-// Your reCAPTCHA verification logic from test.php
+// Verification ReCaptcha faite
 echo "<script>
         function validateForm() {
             var response = grecaptcha.getResponse();
