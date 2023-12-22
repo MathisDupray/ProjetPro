@@ -5,18 +5,19 @@ require_once __DIR__ . './../vendor/phpmailer/phpmailer/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
-// Get reCAPTCHA secret key from environment variable
-$recaptcha_secret_key = getenv('RECAPTCHA_SECRET_KEY');
+$recaptcha_secret_key = "6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP";
+// C'est pas bien mais pas le choix car
+// pas de variables d'environnement dispo
 
 if (!isset($recaptcha_secret_key) || empty($recaptcha_secret_key)) {
-    // Handle the case where the reCAPTCHA secret key is not properly configured
+    // Si mal config
     die('reCAPTCHA secret key is missing or empty.');
 }
 
-// Validate reCAPTCHA response
+// Validation reCAPTCHA reponse
 $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
 
-// Perform server-side reCAPTCHA verification
+// server-side reCAPTCHA verification
 $recaptcha_verify_url = 'https://www.google.com/recaptcha/api/siteverify';
 $recaptcha_data = [
     'secret'   => $recaptcha_secret_key,
@@ -36,7 +37,7 @@ $recaptcha_result = file_get_contents($recaptcha_verify_url, false, $recaptcha_c
 $recaptcha_result_data = json_decode($recaptcha_result, true);
 
 if (!$recaptcha_result_data['success']) {
-    // Handle the case where reCAPTCHA verification fails
+    // si fail
     die('reCAPTCHA verification failed.');
 }
 
