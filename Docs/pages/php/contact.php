@@ -1,7 +1,10 @@
 <?php
-include_once './../vendor/autoload.php';
+include_once('../vendor/autoload.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use \PHPMailer\PHPMailer\SMTP;
+error_reporting(E_ALL);
+ini_set('display_errors', true);
+
  
 ?>
 <?php
@@ -27,7 +30,7 @@ if(!empty($_POST)) {
  
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = $_POST['subject']??'Subject';
+        $mail->Subject = $_POST['subject'].$_POST['nom']??'Subject';
         $mail->Body = $_POST['body']??'This is the HTML message body <b>in bold!</b>';
  
         $mail->send();

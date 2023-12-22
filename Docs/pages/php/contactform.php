@@ -3,11 +3,6 @@
     echo "<h2>Contactez moi !</h2>";
 	echo "<div class='formwrapper'>";
         echo "<form action='./php/contact.php' method='post'>";
-        // to
-        echo "<div class='to'>";
-            echo "<p>Email</p>";
-            echo "<input type='text' name='to' placeholder='adressemail@exemple.com'>";
-        echo "</div>";
         // Nom
         echo "<div class='nom'>";
             echo "<p>Nom</p>";

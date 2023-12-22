@@ -391,7 +391,7 @@ header li a:hover {
     padding-top:7%;
 }
 
-.Contactform .to, .sujet, .nom, .message {
+.Contactform .sujet, .nom, .message {
     display:flex;
     padding:1em;
 }

@@ -1,5 +1,5 @@
-<?php require_once("../libraries/yaml.php");
-?>
+<?php /*require_once("../libraries/yaml.php");
+*/?>
 <!doctype html>
 <html lang="fr">
 	<head>
@@ -47,7 +47,7 @@
 					include("./php/contactform.php");
 				?>
 				<?php
-					/*include("./php/contact.php"); */
+					include("./php/contact.php");
 				?>
 			</section>
 		</div>
