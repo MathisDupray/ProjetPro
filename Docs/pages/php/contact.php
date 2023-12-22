@@ -25,7 +25,7 @@ if(!empty($_POST)) {
  
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = $_POST['subject'].$_POST['nom']??'Subject';
+        $mail->Subject = ($_POST['subject'] ?? '') . ($_POST['nom'] ?? 'Subject');
         $mail->Body = $_POST['body']??'This is the HTML message body <b>in bold!</b>';
  
         $mail->send();
