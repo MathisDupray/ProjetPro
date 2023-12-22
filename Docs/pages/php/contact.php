@@ -30,11 +30,6 @@ $recaptcha_context = stream_context_create($recaptcha_options);
 $recaptcha_result = file_get_contents($recaptcha_verify_url, false, $recaptcha_context);
 $recaptcha_result_data = json_decode($recaptcha_result, true);
 
-if (!$recaptcha_result_data['success']) {
-    // Handle the case where reCAPTCHA verification fails
-    die('reCAPTCHA verification failed.');
-}
-
 // Proceed with sending email if reCAPTCHA verification is successful
 
 
