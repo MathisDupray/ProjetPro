@@ -19,7 +19,7 @@ echo "</div>";
 // Message
 echo "<div class='message'>";
 echo "<p>Message</p>";
-echo "<textarea name='body' rows='10' cols='50'></textarea> required";
+echo "<textarea name='body' rows='10' cols='50' required></textarea>";
 echo "</div>";
 
 // reCAPTCHA
