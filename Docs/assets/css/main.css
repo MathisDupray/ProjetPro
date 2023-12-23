@@ -60,6 +60,7 @@ header {
     top:0;
     background: rgb(255,255,255);
     background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,8,54,1) 20%);
+    z-index:100;
 }
 
 header .headerlogo {
@@ -148,6 +149,7 @@ header li a:hover {
     margin-top:2em;
     border:2px solid black;
     position:relative;
+    z-index:99;
 }
 
 /* Media query for smaller screens */
