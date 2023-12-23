@@ -20,7 +20,8 @@
     Suite excel: 8
     Windows: 9
     Linux: 7
-- domaine: certifications
-  SecNum Académie: 10
-  Voltaire: 7
-  CCNA: "En cours"
+- domaine: Certifications
+  competences:
+    SecNum Académie: 10
+    Voltaire: 7
+    CCNA: "En cours"
