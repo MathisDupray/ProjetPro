@@ -9,23 +9,21 @@ foreach ($data as $domaine) {
     echo "<div class='domaine'><h2>".$domaine['domaine']."</h2>\n";
 
     foreach ($domaine["competences"] as $competence => $niveau) {
-        // Convert competence name to lowercase and remove spaces
+        // Créer une variable pour les certifs, "SecNum Academie" --> "secnumacademie", pour chemin vers certif.pdf
         $competenceLowerCase = str_replace(' ', '', strtolower($competence));
-
         echo "<div class='competence'>";
         echo "<p class='competence-name'>".$competence."</p>";
-
-        // Check if $niveau is a number (integer or floating-point)
+        // Si numerique, alors barre de progress, si type string, alors lien vers certif
         if (is_numeric($niveau)) {
             echo "<div class='progress-bar'>";
             echo "<div class='progress'><div class='gradient-bar' style='width: ".($maxSkillLevel * $niveau)."%;'></div></div>";
             echo "</div>";
         } else {
-            // If $niveau is a string, create a link for any non-numeric string
-            $pdfFilePath = "./../../Docs/pages/php/" . $competenceLowerCase . ".pdf"; // Adjust the path accordingly
+            // Si chaine de caracteres, alors verif' si un fichier de certif relatif à la competence existe
+            $pdfFilePath = "./../../Docs/pages/php/" . $competenceLowerCase . ".pdf"; // Chemin vers le .pdf
             echo "<div class='skill-description'>";
             if (file_exists($pdfFilePath)) {
-                echo "<a href='".$pdfFilePath."' target='_blank'>{$niveau}</a>";
+                echo "<a href='".$pdfFilePath."' target='_blank' style='text-align:center;'>{$niveau}</a>";
             } else {
                 echo $niveau;
             }
