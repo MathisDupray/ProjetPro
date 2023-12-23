@@ -10,6 +10,13 @@ echo "<p>Nom</p>";
 echo "<input type='text' name='nom' placeholder='Votre Nom' required>";
 echo "</div>";
 
+// email sender
+// Nom
+echo "<div class='youremail'>";
+echo "<p>Email</p>";
+echo "<input type='text' name='email' placeholder='Votre Email' required>";
+echo "</div>";
+
 // sujet
 echo "<div class='sujet'>";
 echo "<p>Sujet</p>";

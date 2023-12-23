@@ -45,8 +45,8 @@ $remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
 $gRecaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 $recaptcha = new \ReCaptcha\ReCaptcha("6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP", new \ReCaptcha\RequestMethod\CurlPost());
 // Clé privé du captcha stockée ici, pas bien mais pas le choix
-// car pas accès aux variables d'environnement
-$resp = $recaptcha->setScoreThreshold(0.0) // Pour une raison que j'ignore, meme un threshold de 0.1 bloque l'envoie du mail ..
+// car pas accès a la création de variables d'environnement
+$resp = $recaptcha->setScoreThreshold(0.0) // Pour une raison que j'ignore, meme un threshold de 0.1 bloque l'envoi du mail ..
                   ->verify($gRecaptchaResponse, $remoteIp);
 
 if ($resp->isSuccess()) {
@@ -69,9 +69,10 @@ if ($resp->isSuccess()) {
     
             // Content
             $mail->isHTML(true);  // Set email format to HTML
-            $mail->Subject = ($_POST['subject'] ?? '') . ($_POST['nom'] ?? 'Name : non renseigne');
-            $mail->Body = $_POST['body'] ?? 'This is the HTML message body <b>in bold!</b>';
-    
+            $mail->Subject = ($_POST['subject'] ?? '') . ' de :' . ($_POST['nom'] ?? 'Name : non renseigne');
+            $mail->Body = ('email sender : ' . $_POST['email']) . ($_POST['body'] ?? 'This is the HTML message body <b>in bold!</b>');
+            // pas besoin du null coalescing operator ici car le champ est "required" dans le formulaire
+            // mais par principe, je l'inclus quand meme.
             $mail->send();
             echo 'Message has been sent';
         } catch (Exception $e) {

@@ -416,7 +416,7 @@ header li a:hover {
     padding-top:7%;
 }
 
-.Contactform .sujet, .nom, .message {
+.Contactform .sujet, .nom, .message, .youremail {
     display:flex;
     padding:1em;
 }
