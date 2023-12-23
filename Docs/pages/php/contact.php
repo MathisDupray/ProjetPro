@@ -44,7 +44,7 @@ use ReCaptcha\ReCaptcha;
 $remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
 $gRecaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 $recaptcha = new \ReCaptcha\ReCaptcha("6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP", new \ReCaptcha\RequestMethod\CurlPost());
-$resp = $recaptcha->setScoreThreshold(0.2)
+$resp = $recaptcha->setScoreThreshold(0.0) // Pour une raison que j'ignore, meme un threshold de 0.1 bloque l'envoie du mail ..
                   ->verify($gRecaptchaResponse, $remoteIp);
 
 if ($resp->isSuccess()) {
