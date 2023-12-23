@@ -28,7 +28,7 @@ echo "<div class='g-recaptcha' data-sitekey='6LeK6DkpAAAAAL1VLNtCir0-V331rtUcOLa
 // Verification ReCaptcha faite
 echo "<script>
         function validateForm() {
-            var response = grecaptcha.getResponse();
+            var response = grecaptcha.getResponse(); /*requete api google*/
             if (response.length == 0) {
                 alert('Merci de valider le reCaptcha');
                 return false;

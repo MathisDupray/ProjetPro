@@ -45,11 +45,12 @@
 			</section>
 			<section class="Contactform" id="anchorcontact">
 				<?php 
-					include("./php/contactform.php");
+					include("./php/contactform.php"); // Un peu de javascript pour vérifier que captcha validé
 				?>
 				<?php
 					include("./php/contact.php"); // PHPMailer fonctionne si je rentre mon mot de passe dans contact.php
-				?>
+				// Actions d'envoie de mail a l'intérieur de la boucle de verif captcha
+				?> 
 			</section>
 		</div>
 		<footer>
