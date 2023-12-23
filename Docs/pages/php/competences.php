@@ -17,7 +17,7 @@ foreach ($data as $domaine) {
         if (!is_numeric($niveau)) {
             echo "<div class='skill-description' style='text-align: center;'>";
             // Si chaine de caracteres, alors verif' si un fichier de certif relatif à la competence existe
-            $pdfFilePath = "./../../Docs/pages/php/" . $competenceLowerCase . ".pdf"; // Chemin vers le .pdf
+            $pdfFilePath = "./../../Docs/assets/images/" . $competenceLowerCase . ".pdf"; // Chemin vers le .pdf
             if (file_exists($pdfFilePath)) {
                 echo "<a href='".$pdfFilePath."' target='_blank'>{$niveau}</a>";
             } else {
