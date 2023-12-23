@@ -2,6 +2,15 @@
 
 require_once __DIR__ . './../vendor/phpmailer/phpmailer/src/PHPMailer.php';
 require_once __DIR__ . './../vendor/phpmailer/phpmailer/src/SMTP.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/RequestMethod/Curl.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/RequestMethod/CurlPost.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/RequestMethod/Post.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/RequestMethod/Socket.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/RequestMethod/SocketPost.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/ReCaptcha.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/RequestMethod.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/Response.php';
+require_once __DIR__ . './../vendor/google/recaptcha/src/ReCaptcha/RequestParameters.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use ReCaptcha\ReCaptcha;
