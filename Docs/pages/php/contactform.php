@@ -19,7 +19,7 @@ echo "</div>";
 // Message
 echo "<div class='message'>";
 echo "<p>Message</p>";
-echo "<textarea name='body' rows='10' cols='50' required></textarea>";
+echo "<textarea name='body' rows='10' cols='50' required></textarea><p style='padding-left:5vw;'>Conformément au RGPD, je ne stocke aucune donnée renseignée ici</p>";
 echo "</div>";
 
 // reCAPTCHA
