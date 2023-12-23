@@ -81,6 +81,10 @@ header li a:hover {
         justify-content: center;
     }
 
+    header{
+        padding:2vh;
+    }
+    
     header li a {
         padding: 0.5em;
         font-size: 0.8em;
