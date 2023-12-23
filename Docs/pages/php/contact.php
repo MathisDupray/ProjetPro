@@ -43,10 +43,8 @@ use ReCaptcha\ReCaptcha;
 // AVEC CAPTCHA
 $remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
 $gRecaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
-$recaptcha = new \ReCaptcha\ReCaptcha("6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP");
-$resp = $recaptcha->setExpectedHostname('sts-sio-caen.info')
-                  ->setExpectedAction('homepage')
-                  ->setScoreThreshold(0.5)
+$recaptcha = new \ReCaptcha\ReCaptcha("6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP", new \ReCaptcha\RequestMethod\CurlPost());
+$resp = $recaptcha->setScoreThreshold(0.2)
                   ->verify($gRecaptchaResponse, $remoteIp);
 
 if ($resp->isSuccess()) {
