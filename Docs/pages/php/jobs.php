@@ -1,6 +1,6 @@
 <?php
 	$data=yaml_parse_file("../assets/data/jobs.yaml");
-	echo "<h1>Job experiences</h1>";
+	echo "<h1>Expérience professionnelles</h1>";
 	echo "<div class='job_wrapper'>";
 	foreach($data AS $jobs){
 		$imgsrc= $jobs["jobID"];
