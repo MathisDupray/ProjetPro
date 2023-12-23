@@ -21,11 +21,15 @@ foreach ($data as $domaine) {
         } else {
             // If $niveau is a string, create a link for any non-numeric string
             $pdfFilePath = "./../../assets/images/".$competenceLowerCase.".pdf";
+            echo "<div class='skill-description'>";
             if (file_exists($pdfFilePath)) {
-                echo "<div class='skill-description'><a href='".$pdfFilePath."' target='_blank'>".$niveau."</a></div>";
-            } else {
-                echo "<div class='skill-description'>".$niveau."</div>";
+                echo "<a href='".$pdfFilePath."' target='_blank'>";
             }
+            echo $niveau;
+            if (file_exists($pdfFilePath)) {
+                echo "</a>";
+            }
+            echo "</div>";
         }
 
         echo "</div>\n";
