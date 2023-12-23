@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 use ReCaptcha\ReCaptcha;
 
 
-// SANS CAPTCHA
+// SANS CAPTCHA VERIfICATION
 /*if (!empty($_POST['ok'])) {
     $mail = new PHPMailer(true);
     try {
@@ -40,10 +40,12 @@ use ReCaptcha\ReCaptcha;
 }
 */
 
-// AVEC CAPTCHA
+// AVEC CAPTCHA VERIfICATION
 $remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
 $gRecaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 $recaptcha = new \ReCaptcha\ReCaptcha("6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP", new \ReCaptcha\RequestMethod\CurlPost());
+// Clé privé du captcha stockée ici, pas bien mais pas le choix
+// car pas accès aux variables d'environnement
 $resp = $recaptcha->setScoreThreshold(0.0) // Pour une raison que j'ignore, meme un threshold de 0.1 bloque l'envoie du mail ..
                   ->verify($gRecaptchaResponse, $remoteIp);
 

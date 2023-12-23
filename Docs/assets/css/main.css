@@ -18,7 +18,7 @@ html {
 
 @media (max-width: 2000px) {
     body {
-        background-size: 2000px; /* Set the minimum width for the background image */
+        background-size: 2000px;
     }
 }
 /*-----------------------------------------------------------------------*/
@@ -75,7 +75,7 @@ header li a:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { /*media query pour navbar */
     header ul {
         flex-direction: row;
         justify-content: space-around;
