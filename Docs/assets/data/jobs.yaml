@@ -1,7 +1,7 @@
 - poste: "Opérateur sur machine"
   jobID: 1
   entreprise: Helios, Lessay, Manche
-  dateStart: 2017 - Période d'interim
+  dateStart: 2017 - Périodes d'interim
   dateEnd: 2023 - En tout, ~16 mois
   do_what: Manipulation d'objets lourds et coupants. Commandes sur machine
 #- poste : "Placeholder" Pour tester l'integration avec le php
