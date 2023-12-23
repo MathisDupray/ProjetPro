@@ -1,8 +1,11 @@
 <?php
 $data = yaml_parse_file("../assets/data/competences.yaml");
 $maxSkillLevel = 10;
+$documentRoot = $_SERVER['DOCUMENT_ROOT'] . "/ProjetPro"; // Adjust the path accordingly
+
 echo "<h1>Competences</h1>";
 echo "<div class='tables'>";
+
 foreach ($data as $domaine) {
     echo "<div class='domaine'><h2>".$domaine['domaine']."</h2>\n";
 
@@ -20,7 +23,7 @@ foreach ($data as $domaine) {
             echo "</div>";
         } else {
             // If $niveau is a string, create a link for any non-numeric string
-            $pdfFilePath = __DIR__ . "/" . $competenceLowerCase . ".pdf"; // Adjust the path accordingly
+            $pdfFilePath = $documentRoot . "/Docs/pages/php/" . $competenceLowerCase . ".pdf"; // Adjust the path accordingly
             echo "<div class='skill-description'>";
             if (file_exists($pdfFilePath)) {
                 echo "<a href='".$pdfFilePath."' target='_blank'>";
@@ -37,5 +40,6 @@ foreach ($data as $domaine) {
 
     echo "</div>";
 }
+
 echo "</div>";
 ?>
