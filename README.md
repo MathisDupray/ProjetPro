@@ -16,3 +16,4 @@
 1. Inclure lien vers des repo de divers projets (probablement dans "A propos"
 2. Rajouter les options manquantes(supprimées pour l'instant) du process de verification captcha (expectedHostName, setScoreThreshold, expectedAction)
 3. php pour verifier le systeme d'exploitation pour faire un require_once de l'autoload au début du fichier (besoin pour du local sur windows, pas besoin sur linux ou composer est installé)
+4. Améliorer la charte graphique
