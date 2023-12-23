@@ -9,6 +9,7 @@
 1. Le PHPMailer et le reCaptcha fonctionnent correctement si je rentre mon mot de passe dans le contact.php
 2. Quelques difficultés rencontrées lors de l'utilisation des librairies PHP.
 3. Il manque quelques options de vérification dans la vérification du captcha dans contact.php (expectedHostName, setScoreThreshold) mais cela générait des erreurs et empêchait l'envoi du mail.
+4. Sur la VM, pour mettre /pages/ en ServerRoot, j'ai du changer les chemins de tous les fichiers utlisés dans /assets/
 
 ## TODO :
 
