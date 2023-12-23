@@ -25,8 +25,8 @@ foreach ($data as $domaine) {
             // If $niveau is a string, create a link for any non-numeric string
             $pdfFilePath = $projectRoot . "/Docs/pages/php/" . $competenceLowerCase . ".pdf"; // Adjust the path accordingly
             echo "<div class='skill-description'>";
-            if (file_exists($pdfFilePath)) {
-                echo "<a href='".$pdfFilePath."' target='_blank'>{$niveau}</a>";
+            if (file_exists(__DIR__ . $pdfFilePath)) {
+                echo "<a href='".$projectRoot . $pdfFilePath."' target='_blank'>{$niveau}</a>";
             } else {
                 echo $niveau;
             }
