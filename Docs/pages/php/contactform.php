@@ -7,7 +7,7 @@ echo "<form action='./php/contact.php' method='post' onsubmit='return validateFo
 // Nom
 echo "<div class='nom'>";
 echo "<p>Nom</p>";
-echo "<input type='text' name='Nom' placeholder='Votre Nom' required>";
+echo "<input type='text' name='nom' placeholder='Votre Nom' required>";
 echo "</div>";
 
 // sujet
