@@ -6,7 +6,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-if (!empty($_POST)) {
+if (!empty($_POST['ok'])) {
     $mail = new PHPMailer(true);
     try {
         // Server settings
