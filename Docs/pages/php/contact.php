@@ -8,6 +8,8 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 use ReCaptcha\ReCaptcha;
 
+
+// SANS CAPTCHA
 /*if (!empty($_POST['ok'])) {
     $mail = new PHPMailer(true);
     try {
@@ -37,6 +39,8 @@ use ReCaptcha\ReCaptcha;
     }
 }
 */
+
+// AVEC CAPTCHA
 $remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
 $gRecaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 $recaptcha = new \ReCaptcha\ReCaptcha("6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP");

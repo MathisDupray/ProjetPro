@@ -87,8 +87,8 @@ header li a:hover {
     cursor: pointer;
 }
 #scroll-arrow i {
-    font-size: 4rem; /* Adjust the size as needed */
-    color: #ffffff; /* Change color as needed */
+    font-size: 4rem;
+    color: #ffffff;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -123,10 +123,6 @@ header li a:hover {
     text-align: center;
 }
 
-.downarrow {
-    margin-top: 1em;
-}
-
 /*-----------------------------------------------------------------------*/
 /* --------------------------------ABOUT-------------------------------- */
 /*-----------------------------------------------------------------------*/
@@ -144,7 +140,6 @@ header li a:hover {
     border-radius: 25%;
     display:flex;
     background: rgba(159, 99, 99, 0.2);
-    backdrop-filter: blur(5px);
     align-items: center;
     justify-content: space-around;
     height:70%;
@@ -157,12 +152,8 @@ header li a:hover {
 
 /* Media query for smaller screens */
 @media only screen and (max-width: 950px) {
-    /* Adjust styles to prevent horizontal overflow */
     p,#aboutmeimg {
-      /* Add styles to make paragraphs responsive */
-      /* For example, you can set max-width to 100% */
       max-width: 100%;
-      /* You can also add overflow property if needed */
       overflow-x: hidden;
     }
   }
@@ -400,7 +391,7 @@ header li a:hover {
     margin-right:2em;
 }
 
-.Contactform #submit_mail {
+.Contactform #submit_mail, .g-recaptcha {
     margin-left:10%;
     padding:0.5em;
 }
