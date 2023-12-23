@@ -48,7 +48,7 @@
 					include("./php/contactform.php");
 				?>
 				<?php
-					include("./php/contact.php");
+					include("./php/contact.php"); // PHPMailer fonctionne si je rentre mon mot de passe dans contact.php
 				?>
 			</section>
 		</div>
