@@ -37,9 +37,10 @@ use ReCaptcha\ReCaptcha;
     }
 }
 */
-$gRecaptchaResponse = $_POST['g-recaptcha-response'];
+$remoteIp = $_SERVER['REMOTE_ADDR'] ?? '';
+$gRecaptchaResponse = $_POST['g-recaptcha-response'] ?? '';
 $recaptcha = new \ReCaptcha\ReCaptcha("6LeK6DkpAAAAAFtqZa4mfLO9NEegw9uOEALANwqP");
-$resp = $recaptcha->setExpectedHostname('recaptcha-demo.appspot.com')
+$resp = $recaptcha->setExpectedHostname('sts-sio-caen.info')
                   ->setExpectedAction('homepage')
                   ->setScoreThreshold(0.5)
                   ->verify($gRecaptchaResponse, $remoteIp);
