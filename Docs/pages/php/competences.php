@@ -22,9 +22,9 @@ foreach ($data as $domaine) {
                 echo "</div>";
             } else {
                 // If $niveau is a string, check if the corresponding PDF file exists
-                $pdfFilePath = "./../../assets/image/".$competenceLowerCase.".pdf";
+                $pdfFilePath = "./../../assets/images/".$competenceLowerCase.".pdf";
                 if (file_exists($pdfFilePath)) {
-                    echo "<div class='pdf-link'><a href='".$pdfFilePath."' target='_blank'>View Certification</a></div>";
+                    echo "<div class='pdf-link'><a href='".$pdfFilePath."' target='_blank'>Lien vers certif</a></div>";
                 } else {
                     echo "<div class='skill-description'>".$niveau."</div>";
                 }
