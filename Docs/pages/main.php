@@ -11,7 +11,8 @@
 		<script src="./../assets/js/arrow.js"></script>
 	</head>
 	<body>
-		<header id="anchoraccueil">
+		<header>
+			<div id="anchoraccueil"></div>
 			<?php
 				include("./php/navbar.php");
 			?>
