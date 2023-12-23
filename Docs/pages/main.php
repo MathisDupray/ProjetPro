@@ -10,9 +10,8 @@
 		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 		<script src="./../assets/js/arrow.js"></script>
 	</head>
-	<body>
+	<body id="anchoraccueil">
 		<header>
-			<div id="anchoraccueil"></div>
 			<?php
 				include("./php/navbar.php");
 			?>
