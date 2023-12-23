@@ -7,19 +7,19 @@ echo "<form action='./php/contact.php' method='post' onsubmit='return validateFo
 // Nom
 echo "<div class='nom'>";
 echo "<p>Nom</p>";
-echo "<input type='text' name='Nom' placeholder='Votre Nom'>";
+echo "<input type='text' name='Nom' placeholder='Votre Nom' required>";
 echo "</div>";
 
 // sujet
 echo "<div class='sujet'>";
 echo "<p>Sujet</p>";
-echo "<input type='text' name='subject' placeholder='Sujet'>";
+echo "<input type='text' name='subject' placeholder='Sujet' required>";
 echo "</div>";
 
 // Message
 echo "<div class='message'>";
 echo "<p>Message</p>";
-echo "<textarea name='body' rows='10' cols='50'></textarea>";
+echo "<textarea name='body' rows='10' cols='50'></textarea> required";
 echo "</div>";
 
 // reCAPTCHA
