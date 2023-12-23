@@ -30,11 +30,9 @@ echo "<script>
         function validateForm() {
             var response = grecaptcha.getResponse();
             if (response.length == 0) {
-                // If reCAPTCHA is not checked, prevent form submission
-                alert('Please check the reCAPTCHA box.');
+                alert('Merci de valider le reCaptcha');
                 return false;
             }
-            // Otherwise, allow form submission
             return true;
         }
       </script>";
